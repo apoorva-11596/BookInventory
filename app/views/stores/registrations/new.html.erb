@@ -1,3 +1,4 @@
+
 <div class="row center" style="padding: 40px">
 <div class="col s12">
 
@@ -5,6 +6,7 @@
   <%= devise_error_messages! %>
 <div class="row center">
 <div class="input-field col s6 field">
+
     <%= f.label :store_name %><br />
     <%= f.text_field :store_name, autofocus: true, required:true %>
   </div>
@@ -14,6 +16,7 @@
     <%= f.label :manager_name %><br />
     <%= f.text_field :manager_name, autofocus: true, required:true %>
   </div>
+
   </div>
 
 <div class="row center">
@@ -24,12 +27,14 @@
   </div>
 <div class="row center">
 <div class="input-field col s12 field">
+
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
+
   </div>
 
  <div class="row center">
@@ -46,3 +51,5 @@
 
 </div>
 </div>
+
+
