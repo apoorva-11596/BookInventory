@@ -1,0 +1,24 @@
+<div class="row center" style="padding: 40px">
+<div class="col s12"> <%= form_tag '/do_sell' do %>
+
+<div class="row center">
+<div class="input-field col s12">
+	<%=label_tag 'Book name' %>
+	<%= text_field_tag 'book_name' %>
+</div>
+</div>
+<div class="row center">
+ <div class="input-field col s12">
+	<%=label_tag 'copies' %>
+	<%=number_field_tag 'book_copies' %>
+</div>
+</div>
+	
+<div>
+	<a class="waves-effect waves-light btn-large"><%= submit_tag 'SELL' %></a>
+</div>
+
+<% end %>
+</div>
+</div>
+

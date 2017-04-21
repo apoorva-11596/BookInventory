@@ -1,0 +1,18 @@
+<h1 style="color: orange; text-align:center;"> Store Details</h1>
+
+<table class="centered x">
+	<thead>
+		<th>Store Name</th>
+		<th>Manager Name</th>
+		<th>Address</th>
+		<th colspan="9"></th>
+	</thead>
+
+<% @store.each do |s| %>
+<tr>
+<td><%= s.store_name %></td>
+<td><%= s.manager_name %></td>
+<td><%= s.address %></td>
+</tr>
+<% end %>
+</table>

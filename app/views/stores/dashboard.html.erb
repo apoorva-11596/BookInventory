@@ -1,0 +1,43 @@
+
+<div class="random ">
+<div class="waves-effect waves-light btn"><%= link_to 'enter new book', new_book_path %></div>
+<div class="waves-effect waves-light btn"><%= link_to 'Sell' , sell_path %></div>
+</div>
+
+<table class="centered x">
+	<thead>
+		<th>Title</th>
+		<th>Author Name</th>
+		<th>Publisher</th>
+		<th>Edition</th>
+		<th>Price</th>
+		<th>Total Copies</th>
+		<th>Edit Book</th>
+		<th colspan='9'></th>
+	</thead>
+<tbody>
+<% @books.each do |b| %>
+<tr>
+<td><%= b.title %></td>
+<td><%= b.author_name%></td>
+<td><%= b.publisher%></td>
+<td><%= b.edition %></td>
+<td><%= b.price %></td>
+<td><div style="display:flex; justify-content: center; align-items: center;">
+	<%= BookInv.find_by_book_id_and_inventory_id(b.id,current_store.inventory.id).copies %>
+	<br/>
+	<%= form_tag '/addcopies' do%>
+	<%= hidden_field_tag :book_id, b.id %>
+	<a class="btn-floating btn-large waves-effect waves-light orange y"><i class="material-icons"><%= submit_tag '+' %></i></a>
+	<% end %>
+	</div>
+</td>
+<td> <%=link_to 'Edit Book', edit_book_path(b)%></td>
+</tr>
+</tbody>
+<% end %>
+</table>
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+@import "materialize/components/color";
+$primary-color: color("blue","base") !default;
+$secondary-color: color("orange", "lighten-1") !default;
+@import 'materialize';
+@import "materialize/extras/nouislider";;
+
+	.header{
+		padding-right: 70px;
+		padding-left: 70px;
+	}
+
+	.wide-container{
+		width: 90%;
+		margin : auto;
+	}
+
+	.random{
+		padding: 40px;
+		display:flex;
+		justify-content: space-around;
+		align-items:center;
+	}
+
+	.random > div{
+	margin: 5px;
+	}
+
+	.random > div > a{
+	 color: white;
+	}
+
+	.x{
+		margin: 70px;
+		width: 90%;
+		text-align:center;
+	}
